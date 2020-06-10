@@ -1,0 +1,33 @@
+{
+  "name": "utilservice",
+  "version": "1.0.0",
+  "description": "Utilitiy Micro Service features are consumed across other services",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ManojKanumuru/UtilService.git"
+  },
+  "author": "Manoj",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.0",
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.19.0",
+    "config": "^3.3.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "handlebars": "^4.7.6",
+    "joi": "^14.3.1",
+    "sendgrid": "^5.2.3",
+    "underscore": "^1.10.2"
+  },
+  "bugs": {
+    "url": "https://github.com/ManojKanumuru/UtilService/issues"
+  },
+  "homepage": "https://github.com/ManojKanumuru/UtilService#readme"
+}
