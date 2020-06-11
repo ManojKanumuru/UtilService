@@ -3,19 +3,12 @@
 let constants = {
 	'success'		: 200,
     'failure'		: 201,
-    'userRole'  : {
-        'superAdmin'    : 'superadmin',
-        'staff'         : 'staff'
-    },
-    'messages' : {
+    'messages' : { 
         'success'               : 'success',
-        'emailSentSuccess'      : 'email sent successfully',
-        'deleteSuccess'         : 'delete success',
-        'loginValid' 			: 'login credentials are valid',
-        'loginInvalid' 			: 'Invalid Credentials',
-        'createUserSuccess'     : 'User created successfully'
+        'emailSentSuccess'      : 'email sent successfully'
     },
-    'sendgridKey' : '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'
+    //'old' : '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'
+    'acc': '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'
 };
 
 module.exports =  constants;

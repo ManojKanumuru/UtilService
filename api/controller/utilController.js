@@ -86,7 +86,7 @@ exports.sendMail = function(req, res){
 
     requestObj.toEmailArray = _.uniq(requestObj.to.split(','));
 
-    let emailSent = yield formMailObj(requestObj, constants.sendgridKey);
+    let emailSent = yield formMailObj(requestObj, constants.acc);
 
     return responses.sendResponse(res, constants.success, constants.messages.emailSentSuccess, emailSent.body);
   })().catch(function (error) {
@@ -173,7 +173,7 @@ exports.sendEmailWithHtmlData = function(req, res){
 
     requestObj.toEmailArray = _.uniq(requestObj.to.split(','));
 
-    let emailSent = yield sendHtmlMail(requestObj, constants.sendgridKey);
+    let emailSent = yield sendHtmlMail(requestObj, constants.acc);
 
 		return responses.sendResponse(res, constants.success, constants.messages.emailSentSuccess, emailSent.body);
   
@@ -219,7 +219,7 @@ let processBulkEmails = function(request){
             'approvalLink' : obj.approvalLink
           }
       };
-      sendHtmlMail(requestObj, constants.sendgridKey).then(function(data){
+      sendHtmlMail(requestObj, constants.acc).then(function(data){
         console.log("email sent in each call");
         callback();
       }).catch(function(err){
